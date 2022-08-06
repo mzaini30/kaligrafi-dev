@@ -8,6 +8,7 @@ specifiers:
   '@vitejs/plugin-vue': ^2.3.1
   '@vueuse/head': ^0.7.6
   happy-dom: ^5.3.1
+  info-zen: ^0.0.2
   markdown-it: ^13.0.1
   markdown-it-prism: ^2.2.4
   presite: ^2.1.2
@@ -39,6 +40,7 @@ devDependencies:
   '@vitejs/plugin-vue': 2.3.3_vite@2.9.12+vue@3.2.37
   '@vueuse/head': 0.7.6_vue@3.2.37
   happy-dom: 5.3.1
+  info-zen: 0.0.2
   markdown-it: 13.0.1
   markdown-it-prism: 2.2.4
   presite: 2.1.2
@@ -1849,6 +1851,13 @@ packages:
       wrappy: 1.0.2
     dev: true
 
+  /info-zen/0.0.2:
+    resolution: {integrity: sha512-qHCmVF5tMvdmR+7fTLwHzG8NAoFZZNfvs81vzMcnlf51m8ZHzPej/RCrFLGGK7Dk7PXra5ax6MFic/rKj+SpBQ==}
+    dependencies:
+      latest-blogspot: 1.0.4
+      vue: 3.2.37
+    dev: true
+
   /inherits/2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
     dev: true
@@ -2136,6 +2145,10 @@ packages:
 
   /kolorist/1.5.1:
     resolution: {integrity: sha512-lxpCM3HTvquGxKGzHeknB/sUjuVoUElLlfYnXZT73K8geR9jQbroGlSCFBax9/0mpGoD3kzcMLnOlGQPJJNyqQ==}
+    dev: true
+
+  /latest-blogspot/1.0.4:
+    resolution: {integrity: sha512-Ye+4auLg0t9ErM9YECk8+8sUe0P4Q+yKkscGOXVmjC1XRQZ+sn1mq/asF2sRwtEiH/neN2xyFJjsNKdD9NN2ng==}
     dev: true
 
   /latest-version/5.1.0:

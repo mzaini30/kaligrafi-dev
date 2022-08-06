@@ -1,5 +1,6 @@
 <script setup="" lang="ts">
-import { Ref, ref } from "vue";
+import { ref } from "vue";
+import Info from "info-zen";
 
 const namaFont = [
   "Ah Moharram",
@@ -30,11 +31,11 @@ const namaFont = [
   "Uthmanic Hafs",
 ];
 
-const { stringify, parse } = JSON;
+// const { stringify, parse } = JSON;
 
 const teks = ref("");
 const fontSize = ref(50);
-const blog: Ref<any> = ref({});
+// const blog: Ref<any> = ref({});
 
 function perbesar() {
   fontSize.value += 10;
@@ -44,34 +45,35 @@ function perkecil() {
   fontSize.value -= 10;
 }
 
-if (localStorage.blog) {
-  blog.value = parse(localStorage.blog);
-}
+// if (localStorage.blog) {
+//   blog.value = parse(localStorage.blog);
+// }
 
-async function ambil(): Promise<void> {
-  let data = await fetch("https://android.zenia.my.id/pertama.json");
-  data = await data.json();
-  blog.value = data;
-  localStorage.blog = stringify(data);
-}
-ambil();
+// async function ambil(): Promise<void> {
+//   let data = await fetch("https://android.zenia.my.id/pertama.json");
+//   data = await data.json();
+//   blog.value = data;
+//   localStorage.blog = stringify(data);
+// }
+// ambil();
 </script>
 
 <template>
-  <div class="text-sm bg-black text-white text-center p-2 truncate">
+  <Info></Info>
+  <!-- <div class="text-sm bg-black text-white text-center p-2 truncate">
     <a
       :href="`https://android.zenia.my.id/tulisan/${blog.slug}`"
       class="underline decoration-dotted"
       >{{ blog.judul }}</a
     >
-  </div>
+  </div> -->
   <div class="p-3">
     <input
       type="text"
       class="w-full mb-3 border border-slate-200 focus:outline-none focus:border-slate-500 p-2 rounded"
       style="direction: rtl"
       placeholder="اكتب هنا"
-      v-model="teks"
+      @keyup="teks = ($event.target as HTMLInputElement).value"
     />
 
     <div
