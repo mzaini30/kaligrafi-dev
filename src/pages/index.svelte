@@ -64,12 +64,14 @@
     {/each}
   {/if}
   <div class="jarak" />
-  <Fab onClick={() => (fontSize += 10)} position="right-bottom" color="green">
-    <Icon ios="f7:plus" aurora="f7:plus" md="material:add" />
-  </Fab>
-  <Fab onClick={() => (fontSize -= 10)} position="left-bottom" color="yellow">
-    <Icon ios="f7:minus" aurora="f7:minus" md="material:minus" />
-  </Fab>
+  <div class="tombol">
+    <Fab onClick={() => (fontSize += 10)} position="right-bottom" color="green"
+      >&plus;</Fab
+    >
+    <Fab onClick={() => (fontSize -= 10)} position="left-bottom" color="yellow"
+      >&minus;</Fab
+    >
+  </div>
 </Page>
 
 <style>
@@ -82,5 +84,11 @@
   .jarak {
     width: 100%;
     height: 70px;
+  }
+  .tombol {
+    font-size: 50px;
+  }
+  .tombol :global(.fab) {
+    position: fixed;
   }
 </style>

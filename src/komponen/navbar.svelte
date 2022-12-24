@@ -25,7 +25,7 @@
 <Actions id="actions-one-group">
   <ActionsGroup>
     <ActionsButton onClick={() => push("/")}>Home</ActionsButton>
-    <ActionsButton onClick={() => push("/donasi")}>Donation</ActionsButton>
+    <ActionsButton onClick={() => push("/donasi")}>Support Me</ActionsButton>
     <ActionsButton
       onClick={() =>
         (location.href =

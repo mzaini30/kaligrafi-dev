@@ -4,6 +4,6 @@
 </script>
 
 <Page>
-  <Navbar title="Donation" />
+  <Navbar title="Support Me" />
   <Card outline title="Bitcoin" content="1EXJ6PTdX6JhGLDMcrmnUwUBk9cSyrAyWZ" />
 </Page>

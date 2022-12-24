@@ -2,10 +2,9 @@
   import Router from "svelte-spa-router";
   import routes from "virtual:generated-pages-svelte";
   import { App, Navbar, Page } from "framework7-svelte";
-  import "framework7-icons";
 </script>
 
-<App>
+<App theme="ios">
   <Router {routes} />
 </App>
 
