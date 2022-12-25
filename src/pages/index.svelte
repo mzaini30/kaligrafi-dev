@@ -1,7 +1,5 @@
 <script>
   import "../style/font.css";
-  import { Page, List, ListInput, Card, Fab, Icon } from "framework7-svelte";
-  import Navbar from "../komponen/navbar.svelte";
 
   const namaFont = [
     "Ah Moharram",
@@ -35,60 +33,54 @@
   let teks = "";
 </script>
 
-<Page>
-  <Navbar />
-  <div class="inputan">
-    <List noHairlinesMd>
-      <ListInput
-        outline
-        label="اكتب هنا"
-        placeholder="Write in Arabic letters"
-        floatingLabel
-        type="text"
-        clearButton
-        bind:value={teks}
-      />
-    </List>
-  </div>
+<div class="container">
+  <input
+    dir="rtl"
+    type="text"
+    data-role="input"
+    placeholder="اكتب هنا"
+    bind:value={teks}
+  />
+
   {#if teks}
     {#each namaFont as item}
-      <Card outline>
-        <span slot="header">{item}</span>
+      <div class="card">
+        <div class="card-header">{item}</div>
         <div
-          style="font-size: {fontSize}px; font-family: '{item}'; direction: rtl"
-          slot="content"
+          style="font-size: {fontSize}px; font-family: '{item}'"
+          dir="rtl"
+          class="card-content p-2"
         >
           {teks}
         </div>
-      </Card>
+      </div>
     {/each}
+    <div class="jarak" />
   {/if}
-  <div class="jarak" />
-  <div class="tombol">
-    <Fab onClick={() => (fontSize += 10)} position="right-bottom" color="green"
-      >&plus;</Fab
-    >
-    <Fab onClick={() => (fontSize -= 10)} position="left-bottom" color="yellow"
-      >&minus;</Fab
-    >
-  </div>
-</Page>
+  <button
+    on:click={() => (fontSize += 10)}
+    class="button tambah primary success cycle ">&plus;</button
+  >
+  <button
+    on:click={() => (fontSize -= 10)}
+    class="button primary kurang warning cycle ">&minus;</button
+  >
+</div>
 
 <style>
-  .inputan :global(input) {
-    direction: rtl;
+  .button.cycle {
+    font-size: 30px;
   }
-  .inputan :global(.input-clear-button) {
-    left: 8px;
+  .tambah,
+  .kurang {
+    position: fixed;
+    bottom: 10px;
+  }
+  .tambah {
+    right: 10px;
   }
   .jarak {
     width: 100%;
-    height: 70px;
-  }
-  .tombol {
-    font-size: 50px;
-  }
-  .tombol :global(.fab) {
-    position: fixed;
+    height: 50px;
   }
 </style>

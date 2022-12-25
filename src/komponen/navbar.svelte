@@ -1,17 +1,4 @@
-<script>
-  import {
-    Navbar,
-    MenuItem,
-    MenuDropdown,
-    MenuDropdownItem,
-    Button,
-    Menu,
-    NavRight,
-    Actions,
-    ActionsGroup,
-    ActionsLabel,
-    ActionsButton,
-  } from "framework7-svelte";
+<!-- <script>
   import { push } from "svelte-spa-router";
   export let title = "Kaligrafi";
 </script>
@@ -33,4 +20,4 @@
       >Give 5 Stars</ActionsButton
     >
   </ActionsGroup>
-</Actions>
+</Actions> -->
