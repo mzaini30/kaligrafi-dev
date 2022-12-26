@@ -1,9 +1,7 @@
 <script>
-  import "./vendor/metro-all.min.css";
   import Router from "svelte-spa-router";
   import routes from "virtual:generated-pages-svelte";
-  import "./vendor/metro.min";
-  
+
   function tutup() {
     document.querySelector(".hamburger").click();
   }
