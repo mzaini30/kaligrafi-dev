@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@sveltejs/vite-plugin-svelte': ^1.0.2
   '@vitejs/plugin-legacy': ^2.1.0
-  header-apk: ^0.0.1
+  header-apk: ^0.1.0
   svelte: ^3.49.0
   svelte-spa-router: ^3.3.0
   terser: ^5.15.0
@@ -12,7 +12,7 @@ specifiers:
 
 dependencies:
   '@vitejs/plugin-legacy': 2.1.0_terser@5.15.0+vite@3.1.2
-  header-apk: 0.0.1
+  header-apk: 0.1.0
   svelte-spa-router: 3.3.0
   terser: 5.15.0
   vite-plugin-pages-svelte: 0.0.1_cifgapkqnqjvj6z74goxxamy3q
@@ -586,8 +586,8 @@ packages:
     dependencies:
       function-bind: 1.1.1
 
-  /header-apk/0.0.1:
-    resolution: {integrity: sha512-Z0WvjUwMHlJEYIlk826yoHb68FMdfhLb2tKWBJcO7avoxGoUwvy6SSbpQAlgC7RSwTzn/BCQqIDb2PmNzFf5ug==}
+  /header-apk/0.1.0:
+    resolution: {integrity: sha512-s7fSwL4+WkB2I3EXlpnpW9RY9ibXv3sTBQBY1uREIz4Qp5FxNPEW1rqdOp2qLTR9agL1+iRlCjzhL7oY6l5E+w==}
     dev: false
 
   /internal-slot/1.0.3:
