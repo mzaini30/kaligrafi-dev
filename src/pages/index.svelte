@@ -1,34 +1,7 @@
 <script>
   import "../style/font.css";
+  import namaFont from "../script/nama-font";
 
-  const namaFont = [
-    "Ah Moharram",
-    "Al-Battar",
-    "Al-Jazeera",
-    "Al-Watan Headlines",
-    "Ara Aqeeq",
-    "Arabics",
-    "Basim Marah Beh",
-    "Boutros Art",
-    "Cocon",
-    "Diwan",
-    "Edilbi Souria",
-    "Fanni",
-    "Farsi",
-    "Hacen Saudi Arabia",
-    "Hamada",
-    "Hayah",
-    "Ibtisam",
-    "Khat Thuluth",
-    "Khayal",
-    "Maghribi Assile",
-    "Naskh",
-    "Noora",
-    "Sadiyah",
-    "Sardar Hoor",
-    "Thuluth",
-    "Uthmanic Hafs",
-  ];
   let fontSize = 50;
   let teks = "";
 </script>
@@ -55,8 +28,16 @@
         </div>
       </div>
     {/each}
+
     <div class="jarak" />
   {/if}
+  <div class="card">
+    <div class="card-content p-2 fg-white bg-black">Support Me</div>
+    <div class="card-content p-2">
+      Gopay : 0815 4514 3654 <br />
+      Paypal : muhzaini30@gmail.com
+    </div>
+  </div>
   <button
     on:click={() => (fontSize += 10)}
     class="button tambah primary success cycle ">&plus;</button

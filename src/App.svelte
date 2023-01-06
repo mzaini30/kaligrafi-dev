@@ -4,19 +4,11 @@
   import Header from "header-apk";
 </script>
 
-<Header
-  judul="Kaligrafi"
-  id="com.trihandayani.kaligrafi"
-  afiliasi="https://tokopedia.link/Sji7LMb17vb"
-/>
-<div class="isi">
+<div class="py-3">
   <Router {routes} />
 </div>
 
 <style>
-  .isi {
-    padding-top: 70px;
-  }
   :global(*) {
     word-wrap: break-word;
   }
