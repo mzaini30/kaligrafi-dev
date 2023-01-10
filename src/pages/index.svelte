@@ -3,7 +3,8 @@
   import namaFont from "../script/nama-font";
 
   let fontSize = 50;
-  let teks = "";
+  let teks = "الحمد لله رب العالمين";
+  let warna = "#000";
 </script>
 
 <div class="container">
@@ -20,48 +21,38 @@
       <div class="card">
         <div class="card-header">{item}</div>
         <div
-          style="font-size: {fontSize}px; font-family: '{item}'"
+          style="font-size: {fontSize}px; font-family: '{item}';
+          color: {warna}"
           dir="rtl"
-          class="card-content p-2"
+          class="card-content p-2 kaligrafinya"
         >
           {teks}
         </div>
       </div>
     {/each}
-
-    <div class="jarak" />
   {/if}
-  <div class="card">
+  <div class="card mb-10">
     <div class="card-content p-2 fg-white bg-black">Support Me</div>
     <div class="card-content p-2">
       Gopay : 0815 4514 3654 <br />
       Paypal : muhzaini30@gmail.com
     </div>
   </div>
-  <button
-    on:click={() => (fontSize += 10)}
-    class="button tambah primary success cycle ">&plus;</button
-  >
-  <button
-    on:click={() => (fontSize -= 10)}
-    class="button primary kurang warning cycle ">&minus;</button
-  >
+  <div class="fixed-bottom bg-white px-3 d-flex kontrol">
+    <input
+      data-role="slider"
+      data-hint="true"
+      class="slider"
+      data-value={fontSize}
+      on:change={(x) => (fontSize = x.detail.val)}
+    />
+    <input type="color" class="d-block mt-1" bind:value={warna} />
+  </div>
 </div>
 
 <style>
-  .button.cycle {
-    font-size: 30px;
-  }
-  .tambah,
-  .kurang {
-    position: fixed;
-    bottom: 10px;
-  }
-  .tambah {
-    right: 10px;
-  }
-  .jarak {
-    width: 100%;
-    height: 50px;
+  .kontrol {
+    gap: 10px;
+    box-shadow: 0 0 10px 0 gray;
   }
 </style>
