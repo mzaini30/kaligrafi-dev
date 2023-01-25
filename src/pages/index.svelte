@@ -3,7 +3,7 @@
   import namaFont from "../script/nama-font";
 
   let fontSize = 50;
-  let teks = "الحمد لله رب العالمين";
+  let teks = "";
   let warna = "#000";
 </script>
 
@@ -31,13 +31,9 @@
       </div>
     {/each}
   {/if}
-  <div class="card mb-10">
-    <div class="card-content p-2 fg-white bg-black">Support Me</div>
-    <div class="card-content p-2">
-      Gopay : 0815 4514 3654 <br />
-      Paypal : muhzaini30@gmail.com
-    </div>
-  </div>
+  <a href="https://zen.thedev.id/komunitas.html" class="d-block komunitas"
+    >COMMUNITY</a
+  >
   <div class="fixed-bottom bg-white px-3 d-flex kontrol">
     <input
       data-role="slider"
@@ -54,5 +50,16 @@
   .kontrol {
     gap: 10px;
     box-shadow: 0 0 10px 0 gray;
+  }
+  .komunitas {
+    text-decoration: none;
+    width: min-content;
+    color: #212121;
+    border: 1px solid #212121;
+    border-radius: 3px;
+    padding: 3px 10px;
+    margin: 10px auto; /* margin-top: 10px; */
+    font-size: 14px;
+    margin-bottom: 33px;
   }
 </style>
