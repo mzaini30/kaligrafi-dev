@@ -1,9 +1,10 @@
 <script>
   import Router from "svelte-spa-router";
   import routes from "virtual:generated-pages-svelte";
+  import "uno.css";
 </script>
 
-<div class="py-3">
+<div class="">
   <Router {routes} />
 </div>
 
