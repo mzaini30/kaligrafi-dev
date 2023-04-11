@@ -8,7 +8,7 @@
   let warna = "#000";
 </script>
 
-<div class="bg-green-300 py-3 pb-12 min-h-screen">
+<div class="py-3 pb-12 min-h-screen">
   <div class="container">
     <input
       dir="rtl"
@@ -33,13 +33,18 @@
         </div>
       {/each}
     {/if}
-    <!-- <a href="https://zen.thedev.id/komunitas.html" class="d-block komunitas"
-      >COMMUNITY</a
-    > -->
 
-    <a href="https://wa.me/6281545143654" class="block mt-3"
+    <div class="py-4 mx-auto flex justify-center">
+      <a
+        href="https://chat.whatsapp.com/HFVW22P2dpeKOMBJFpSqUd"
+        class="inline-block mx-auto no-underline black text-sm border border-black rounded text-black p-2"
+        >Join Community</a
+      >
+    </div>
+
+    <!-- <a href="https://wa.me/6281545143654" class="block mt-3"
       ><img src={iklan} alt="" /></a
-    >
+    > -->
 
     <div class="fixed-bottom bg-white px-3 d-flex kontrol">
       <input
