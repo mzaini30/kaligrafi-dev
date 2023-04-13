@@ -10,7 +10,12 @@
   let warna = "#000";
   let element;
 
-  function download(id) {}
+  async function download(id) {
+    const blob_gambar = await dom_to_image.toBlob(
+      document.querySelector(`.isi-${id}`)
+    );
+    console.log(blob_gambar);
+  }
 </script>
 
 <div class="py-3 pb-12 min-h-screen">
