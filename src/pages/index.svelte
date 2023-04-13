@@ -2,16 +2,22 @@
   import "../style/font.css";
   import namaFont from "../script/nama-font";
   import iklan from "../gambar/your-ad-here.jpg";
+  import dom_to_image from "dom-to-image";
+  import { slug } from "kumpulan-tools";
 
   let fontSize = 50;
-  let teks = "";
+  let teks = "بسم الله الرحمن الرحيم";
   let warna = "#000";
+  let element;
+
+  function download(id) {}
 </script>
 
 <div class="py-3 pb-12 min-h-screen">
   <div class="container">
     <input
       dir="rtl"
+      class="sticky top-3 z-99"
       type="text"
       data-role="input"
       placeholder="اكتب هنا"
@@ -21,12 +27,15 @@
     {#if teks}
       {#each namaFont as item}
         <div class="card">
-          <div class="card-header">{item}</div>
+          <div class="card-header flex justify-between">
+            <div>{item}</div>
+            <button on:click={() => download(slug(item))}>download</button>
+          </div>
           <div
             style="font-size: {fontSize}px; font-family: '{item}';
           color: {warna}"
             dir="rtl"
-            class="card-content p-2 kaligrafinya"
+            class="card-content p-2 kaligrafinya isi-{slug(item)}"
           >
             {teks}
           </div>
